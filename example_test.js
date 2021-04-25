@@ -11,6 +11,7 @@ Feature('example');
 
 
 Scenario('Extract text Test', async ({ I }) => {
+    I.slowTest(0.2)
     I.amOnPage('http://www.example.com')
     I.refreshPage()
     let text =await I.grabTextFrom('h1')
@@ -19,5 +20,12 @@ Scenario('Extract text Test', async ({ I }) => {
   
 });
 
+
+Scenario('Page objects', ({ I, LoginPage }) => {
+ LoginPage.goto()
+ LoginPage.fillForm()
+ I.waitForText('Login and/or password are wrong')
+  
+});
 
 

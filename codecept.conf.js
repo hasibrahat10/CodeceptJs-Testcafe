@@ -15,10 +15,14 @@ exports.config = {
       waitForTimeout:150000,
       keepCookies: true,
       windowSize:"800x600"
+    },
+    CustomCommands:{
+      require:'./customcommands_helper.js'
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
+    LoginPage:'./pages/LoginPage.js'
   },
   bootstrap: null,
   mocha: {},
