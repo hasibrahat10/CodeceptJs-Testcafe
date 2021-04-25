@@ -37,6 +37,7 @@ Scenario('single element screenshot', ({ I }) => {
     I.amOnPage('https://www.example.com')
     I.wait(1)
     I.seeInCurrentUrl("example.com")
+    I.saveElementScreenshot('h1', 'element.png')
    
 });
 
