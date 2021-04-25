@@ -11,7 +11,10 @@ exports.config = {
     TestCafe: {
       url: 'http://localhost',
       browser: 'chrome',
-      show: false
+      show: true, // default was false
+      waitForTimeout:150000,
+      keepCookies: true,
+      windowSize:"800x600"
     }
   },
   include: {
